@@ -1,15 +1,16 @@
-function patronymicRaw(user) {
-  return String(user?.middleName ?? '').trim();
+function thirdNameRaw(user) {
+  return String(user?.maidenName ?? '').trim();
 }
 
-export function getPatronymic(user) {
-  return patronymicRaw(user) || '—';
+export function getThirdName(user) {
+  return thirdNameRaw(user) || '—';
 }
 
 export function getFio(user) {
   const lastName = String(user?.lastName ?? '').trim();
   const firstName = String(user?.firstName ?? '').trim();
-  const patronymic = patronymicRaw(user);
+  const thirdName = thirdNameRaw(user);
 
-  return [lastName, firstName, patronymic].filter(Boolean).join(' ').trim();
+  return [lastName, firstName, thirdName].filter(Boolean).join(' ').trim();
 }
+

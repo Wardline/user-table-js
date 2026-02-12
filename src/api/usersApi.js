@@ -24,14 +24,13 @@ export async function getUsers({
     params.set('skip', String((page - 1) * pageSize));
   }
 
-  // Отдаем только нужные поля
   params.set(
     'select',
     [
       'id',
       'firstName',
       'lastName',
-      'middleName',
+      'maidenName',
       'age',
       'gender',
       'phone',
@@ -43,7 +42,7 @@ export async function getUsers({
     ].join(',')
   );
 
-  // Требование: сортировка через HTTP-параметры
+  // сортировка через HTTP-параметры
   if (sort.key && sort.order) {
     params.set('sortBy', SORT_TO_API_FIELD[sort.key]);
     params.set('order', sort.order);

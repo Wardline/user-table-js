@@ -1,4 +1,4 @@
-import { getPatronymic } from '../utils/userFormat';
+import { getThirdName } from '../utils/userFormat';
 
 function SortIcon({ active, order }) {
   if (!active) return <span className="sort-icon">↕</span>;
@@ -158,7 +158,7 @@ export default function UsersTable({
               <tr key={user.id} onClick={() => onRowClick(user)} className="clickable-row">
                 <td>{user.lastName}</td>
                 <td>{user.firstName}</td>
-                <td>{getPatronymic(user)}</td>
+                <td>{getThirdName(user)}</td>
                 <td>{user.age}</td>
                 <td>{user.gender}</td>
                 <td>{user.phone}</td>
