@@ -4,7 +4,7 @@
 
 ## Демо и репозиторий
 
-- **GitHub:** `<вставь ссылку на репозиторий>`
+- **GitHub:** `https://github.com/Wardline/user-table-js`
 - **GitHub Pages (Demo):** `<вставь ссылку на демо>`
 
 ---
